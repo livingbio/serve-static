@@ -10,5 +10,5 @@ class CacheImageTest(unittest.TestCase):
 
     def test_cache_image(self):
         from image import cache_image
-        cache_image('test-bucket', "http://www.tagtoo.com.tw/static/website/img/member/Master.jpg")
+        x = cache_image('test-bucket', "http://www.tagtoo.com.tw/static/website/img/member/Master.jpg")
 
