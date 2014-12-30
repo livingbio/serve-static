@@ -1,3 +1,6 @@
 GoogleAppEngineCloudStorageClient
 pyyaml
 Pillow
+coverage
+unittest2
+nose
