@@ -11,7 +11,7 @@ before_script:
   - export PYTHONPATH=${PYTHONPATH}:google_appengine
 
 script:
-    - "nosetests --with-cov"
+    - "nosetests --with-cov --cover-package=serve_static"
 
 notifications:
   slack: tagtoo:nVKAkV8qa1GhV5COWbmdnKjY

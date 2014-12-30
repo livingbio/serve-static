@@ -10,5 +10,8 @@ class CacheImageTest(unittest.TestCase):
 
     def test_cache_image(self):
         from image import cache_image
-        x = cache_image('test-bucket', "http://www.tagtoo.com.tw/static/website/img/member/Master.jpg")
-
+        import urllib
+        url1 = cache_image('test-bucket', "http://www.tagtoo.com.tw/static/website/img/member/Master.jpg")
+        url2 = cache_image('test-bucket', 'http://www.tagtoo.com.tw/static/website/img/member/Master.jpg', urllib.urlopen('http://www.tagtoo.com.tw/static/website/img/member/Master.jpg'))
+        self.assertEqual(url1, url2)
+        
