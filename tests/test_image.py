@@ -12,6 +12,6 @@ class CacheImageTest(unittest.TestCase):
         from serve_static.image import cache_image
         import urllib
         url1 = cache_image('test-bucket', "http://www.tagtoo.com.tw/static/website/img/member/Master.jpg")
-        url2 = cache_image('test-bucket', 'http://www.tagtoo.com.tw/static/website/img/member/Master.jpg', urllib.urlopen('http://www.tagtoo.com.tw/static/website/img/member/Master.jpg'))
+        url2 = cache_image('test-bucket', 'http://www.tagtoo.com.tw/static/website/img/member/Master.jpg', urllib.urlopen('http://www.tagtoo.com.tw/static/website/img/member/Master.jpg').read())
         self.assertEqual(url1, url2)
 
