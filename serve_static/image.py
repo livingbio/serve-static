@@ -24,13 +24,11 @@ def filehash(content):
     m.update(content)
     return m.hexdigest()
 
-def cache_image(bucket, url, fp=None):
-    if not fp:
+def cache_image(bucket, url, content=None):
+    if not content:
         content = urlfetch.fetch(url, headers={'user-agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36'}).content
-    else:
-        content = fp.read()
 
-    filename = "img/" + filehash(content)
+    filename = filehash(content)
     if exist_gs_file(bucket, filename):
         blob_key = blobstore.create_gs_key("/gs/%s/%s" % (bucket, filename))
     else:
