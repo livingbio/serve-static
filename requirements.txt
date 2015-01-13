@@ -4,3 +4,5 @@ Pillow
 coverage
 unittest2
 nose
+webtest
+webapp2
