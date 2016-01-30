@@ -1,8 +1,39 @@
-GoogleAppEngineCloudStorageClient
-pyyaml
-Pillow
-coverage
-unittest2
-nose
-webtest
-webapp2
+# This library is the preferred way of accessing Google Cloud Storage from App Engine. It was designed to replace the Files API. As a result it contains much of the same functionality (streaming reads and writes but not the complete set of GCS APIs). It also provides key stability improvements and a better overall developer experience.
+# https://pypi.python.org/pypi/GoogleAppEngineCloudStorageClient/1.9.22.1
+GoogleAppEngineCloudStorageClient==1.9.22.1
+
+
+# YAML parser and emitter for Python
+# https://pypi.python.org/pypi/PyYAML/3.11
+PyYAML==3.11
+
+
+# Python Imaging Library (Fork)
+# https://pypi.python.org/pypi/Pillow/3.1.0
+Pillow==3.1.0
+
+
+# Code coverage measurement for Python
+# https://pypi.python.org/pypi/coverage/4.1b2
+coverage==4.1b2
+
+
+# The new features in unittest backported to Python 2.4+.
+# https://pypi.python.org/pypi/unittest2/1.1.0
+unittest2==1.1.0
+
+
+# nose extends unittest to make testing easier
+# https://pypi.python.org/pypi/nose/1.3.7
+nose==1.3.7
+
+
+# Helper to test WSGI applications
+# https://pypi.python.org/pypi/WebTest/2.0.20
+WebTest==2.0.20
+
+
+# Taking Google App Engine's webapp to the next level!
+# https://pypi.python.org/pypi/webapp2/2.5.2
+webapp2==2.5.2
+
